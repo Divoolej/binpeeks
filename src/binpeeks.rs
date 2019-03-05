@@ -2,7 +2,7 @@ use std::io::{stdin, Read};
 use std::fs::File;
 
 fn display_help() {
-  println!("\n---------BinPeek-----------");
+  println!("\n--------Bin Peeks----------");
   println!("The available commands are:");
   println!("next (n) - read the next byte");
   println!("help (h) - display this message");
@@ -47,14 +47,14 @@ fn parse_number_from_param(param: Option<&str>, default: Option<usize>) -> Optio
   }
 }
 
-pub struct BinPeek {
+pub struct BinPeeks {
   file: File,
   position: usize,
 }
 
-impl BinPeek {
-  pub fn new(file: File) -> BinPeek {
-    BinPeek {
+impl BinPeeks {
+  pub fn new(file: File) -> BinPeeks {
+    BinPeeks {
       file,
       position: 0,
     }

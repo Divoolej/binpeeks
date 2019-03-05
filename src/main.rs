@@ -2,9 +2,9 @@ use std::fs::File;
 use std::path::PathBuf;
 use structopt::StructOpt;
 
-mod binpeek;
+mod binpeeks;
 
-use crate::binpeek::BinPeek;
+use crate::binpeeks::BinPeeks;
 
 #[derive(StructOpt)]
 struct Opt {
@@ -16,7 +16,7 @@ fn main() {
   let opt = Opt::from_args();
   println!("Peeking into {:?}...", opt.input);
   match File::open(&opt.input) {
-    Ok(file) => BinPeek::new(file).peek(),
+    Ok(file) => BinPeeks::new(file).peek(),
     Err(error) => println!("Error reading {:?}: {}", opt.input, error),
   }
 }
