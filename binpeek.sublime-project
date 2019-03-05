@@ -1,0 +1,25 @@
+{
+  "folders":
+  [
+    {
+      "path": ".",
+      "name": "BinPeek",
+      "folder_exclude_patterns": ["target"],
+    },
+  ],
+  "build_systems":
+  [
+    {
+      "name": "Build",
+      "shell_cmd": "cargo build",
+    },
+    {
+      "name": "Run",
+      "shell_cmd": "cargo run",
+    },
+    {
+      "name": "Test",
+      "shell_cmd": "cargo test",
+    },
+  ],
+}
