@@ -6,3 +6,5 @@ edition = "2018"
 
 [dependencies]
 structopt = "0.2"
+termion = "1"
+signal-hook = "0.1"
